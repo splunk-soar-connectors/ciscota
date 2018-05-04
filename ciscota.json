@@ -7,7 +7,7 @@
     "license": "Copyright (c) Phantom Cyber Corporation, 2018",
     "main_module": "ciscota_connector.pyc",
     "type": "investigative",
-    "app_version": "1.0.0",
+    "app_version": "1.0.1",
     "utctime_updated": "2018-04-16T11:44:10.484117Z",
     "product_vendor": "Cisco",
     "product_name": "Cisco Tetration Analytics",
@@ -511,7 +511,7 @@
         {
             "action": "get flows",
             "description": "Get flows information",
-            "verbose": "If the <b>filter</b> is empty (i.e. {}), then query matches all flows. If parameter <b>dimensions</b> is not specified, flowsearch returns all the available dimensions. This option is useful to specify a subset of the available dimensions when caller does not care about the rest of the dimensions. If parameter <b>metrics</b> is not specified, flowsearch results returns all the available metrics. This option is useful to specify a subset of the available metrics when caller does not care about the rest of the metrics. <br>The app supports multiple methods for specifying <b>filter</b> dictionary. Please refer OpenAPI documentation for more information. Below is one of the example for <b>filter</b> dictionary:<br>{\"type\": \"and\", \"filters\": [{\"type\":\"contains\",\"field\": \"src_hostname\",\"value\": \"prod\"},{\"type\": \"in\",\"field\": \"dst_port\",\"values\": [\"80\", \"443\"]}]}",
+            "verbose": "If the <b>filter</b> is empty (i.e. {}), then the query matches all flows. If parameter <b>dimensions</b> is not specified, flowsearch returns all the available dimensions. This option is useful to specify a subset of the available dimensions when the caller does not care about the rest of the dimensions. If parameter <b>metrics</b> is not specified, flowsearch results returns all the available metrics. This option is useful to specify a subset of the available metrics when the caller does not care about the rest of the metrics. <br>The app supports multiple methods for specifying <b>filter</b> dictionary. Please refer to the OpenAPI documentation for more information. Below is an example for a <b>filter</b> dictionary:<br>{\"type\": \"and\", \"filters\": [{\"type\": \"contains\", \"field\": \"src_hostname\", \"value\": \"prod\"}, {\"type\": \"in\", \"field\": \"dst_port\", \"values\": [\"80\",  \"443\"]}]}",
             "type": "investigate",
             "identifier": "get_flows",
             "read_only": true,
