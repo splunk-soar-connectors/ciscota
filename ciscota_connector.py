@@ -543,7 +543,7 @@ class CiscotaConnector(BaseConnector):
         scope_name = param[CISCO_TA_SCOPE_NAME]
 
         status, response = self._make_rest_call(endpoint=CISCO_TA_REST_LIST_ANNOTATIONS_ENDPOINT.format(scope_name=scope_name),
-                action_result=action_result, method='get')
+                                                action_result=action_result, method='get')
 
         if phantom.is_fail(status):
             return action_result.get_status()
@@ -551,7 +551,7 @@ class CiscotaConnector(BaseConnector):
         if response:
             # Add data in action result
             for item in response:
-                action_result.add_data(item)
+                action_result.add_data({'annotation_name': item})
 
         # Update Summary
         summary_data['total_annotations'] = action_result.get_data_size()
@@ -673,7 +673,7 @@ class CiscotaConnector(BaseConnector):
             return action_result.get_status()
 
         for dimension in response:
-            action_result.add_data(dimension)
+            action_result.add_data({'dimension_name': dimension})
 
         # Update Summary
         summary_data['total_dimensions'] = action_result.get_data_size()
@@ -696,7 +696,7 @@ class CiscotaConnector(BaseConnector):
             return action_result.get_status()
 
         for metric in response:
-            action_result.add_data(metric)
+            action_result.add_data({'metric_name': metric})
 
         # Update Summary
         summary_data['total_metrics'] = action_result.get_data_size()
