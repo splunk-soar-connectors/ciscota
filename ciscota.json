@@ -510,7 +510,7 @@
         },
         {
             "action": "get flows",
-            "description": "Get flows information",
+            "description": "Get flow information",
             "verbose": "If the <b>filter</b> is empty (i.e. {}), then the query matches all flows. If parameter <b>dimensions</b> is not specified, flowsearch returns all the available dimensions. This option is useful to specify a subset of the available dimensions when the caller does not care about the rest of the dimensions. If parameter <b>metrics</b> is not specified, flowsearch results returns all the available metrics. This option is useful to specify a subset of the available metrics when the caller does not care about the rest of the metrics. <br>The app supports multiple methods for specifying <b>filter</b> dictionary. Please refer to the OpenAPI documentation for more information. Below is an example for a <b>filter</b> dictionary:<br>{\"type\": \"and\", \"filters\": [{\"type\": \"contains\", \"field\": \"src_hostname\", \"value\": \"prod\"}, {\"type\": \"in\", \"field\": \"dst_port\", \"values\": [\"80\",  \"443\"]}]}",
             "type": "investigate",
             "identifier": "get_flows",
@@ -1141,7 +1141,7 @@
         },
         {
             "action": "lookup ip",
-            "description": "Get endpoint details and flows of specified IP",
+            "description": "Get endpoint details and flows of a specific IP",
             "type": "investigate",
             "identifier": "lookup_ip",
             "read_only": true,
@@ -1832,7 +1832,7 @@
         },
         {
             "action": "list user groups",
-            "description": "List the user groups",
+            "description": "List configured user groups",
             "type": "investigate",
             "identifier": "list_user_groups",
             "read_only": true,
