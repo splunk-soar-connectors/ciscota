@@ -2054,7 +2054,7 @@
             "versions": "EQ(*)"
         },
         {
-            "action": "upload annotations",
+            "action": "create annotations",
             "description": "Upload annotations to specific scope",
             "verbose": "Upload a CSV file in vault to add or delete user annotations. Vault ID or file name of uploaded CSV will be used to upload annotations. The uploaded CSV must contains IP as a column header.<br>Sample CSV is shown below<br>IP,VRF,Department,Datacenter,...,Column HeaderK<br>7.7.7.7,Disco,HR,SJC,...,columnK_Value<br>...",
             "type": "generic",
@@ -2203,7 +2203,7 @@
             "versions": "EQ(*)"
         },
         {
-            "action": "flush annotations",
+            "action": "delete annotations",
             "description": "Clear all annotations of specific scope",
             "verbose": "Please ensure these annotations are not used by any filters or scopes as they will no longer work as expected.",
             "type": "generic",
@@ -2225,7 +2225,7 @@
                 "width": 12,
                 "height": 5,
                 "type": "table",
-                "title": "Flush annotations"
+                "title": "remove annotations"
             },
             "output": [
                 {
