@@ -1885,7 +1885,7 @@
                     "data_path": "action_result.data.*.users.*.email",
                     "data_type": "string",
                     "example_values": [
-                        "auric-admin@cisco.com"
+                        "administrator@cisco.com"
                     ],
                     "contains": [
                         "email"
