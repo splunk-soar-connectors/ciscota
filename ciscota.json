@@ -1832,7 +1832,7 @@
         },
         {
             "action": "list user groups",
-            "description": "List user groups configured",
+            "description": "List configured user groups",
             "type": "investigate",
             "identifier": "list_user_groups",
             "read_only": true,
